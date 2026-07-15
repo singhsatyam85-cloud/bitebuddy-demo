@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #0c0f14;
+  color: white;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+@keyframes float-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes driver-progress {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(calc(100% - 36px));
+  }
+}
+
+.animate-float-in {
+  animation: float-in 0.35s ease both;
+}
+
+.driver-motion {
+  animation: driver-progress 5s ease-in-out infinite alternate;
+}
+
+.scrollbar-soft {
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+  scrollbar-width: thin;
+}
